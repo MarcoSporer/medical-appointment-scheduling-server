@@ -1,0 +1,52 @@
+{
+  "name": "Appointment",
+  "plural": "appointments",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "mixins": {
+    "Audit": true
+  },
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "start": {
+      "type": "date"
+    },
+    "end": {
+      "type": "date"
+    },
+    "autoAppointmentBlockedSecret": {
+      "type": "string",
+      "description": "This field allows the auto-appointment service to block appointments."
+    }
+  },
+  "validations": [],
+  "relations": {
+    "patient": {
+      "type": "belongsTo",
+      "model": "Patient"
+    },
+    "room": {
+      "type": "belongsTo",
+      "model": "Room"
+    },
+    "attendance": {
+      "type": "hasOne",
+      "model": "Attendance"
+    },
+    "examinations": {
+      "type": "hasAndBelongsToMany",
+      "model": "Examination",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

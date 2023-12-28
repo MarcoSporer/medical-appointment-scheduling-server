@@ -1,0 +1,54 @@
+{
+  "initial:before": {
+    "loopback#favicon": {}
+  },
+  "initial": {
+    "compression": {},
+    "cors": {
+      "params": {
+        "origin": [
+          "https://scheduling-server.herokuapp.com",
+          "https://scheduling-client.herokuapp.com",
+          "http://localhost:8080",
+          "http://0.0.0.0:8080",
+          "http://127.0.0.1:8080",
+          "http://0.0.0.0:3000",
+          "http://127.0.0.1:3000"
+        ]
+      }
+    },
+    "helmet#xssFilter": {},
+    "helmet#frameguard": {
+      "params": [
+        "deny"
+      ]
+    },
+    "helmet#hsts": {
+      "params": {
+        "maxAge": 0,
+        "includeSubdomains": true
+      }
+    },
+    "helmet#hidePoweredBy": {},
+    "helmet#ieNoOpen": {},
+    "helmet#noSniff": {},
+    "helmet#noCache": {
+      "enabled": false
+    }
+  },
+  "session": {},
+  "auth": {},
+  "parse": {},
+  "routes:before": {
+    "loopback#rest": {
+      "paths": [ "${restApiRoot}" ]
+    }
+  },
+  "files": {},
+  "final": {
+    "loopback#urlNotFound": {}
+  },
+  "final:after": {
+    "strong-error-handler": {}
+  }
+}

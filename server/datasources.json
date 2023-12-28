@@ -1,0 +1,24 @@
+{
+  "postgresql": {
+    "host": "localhost",
+    "port": 5432,
+    "database": "mas-dev",
+    "password": "mas",
+    "name": "postgresql",
+    "user": "mas-dev",
+    "debug": true,
+    "connector": "postgresql"
+  },
+  "fakesmtp": {
+    "name": "fakesmtp",
+    "connector": "mail",
+    "transports": [
+      {
+        "type": "SMTP",
+        "host": "localhost",
+        "secureConnection": false,
+        "port": 2525
+      }
+    ]
+  }
+}

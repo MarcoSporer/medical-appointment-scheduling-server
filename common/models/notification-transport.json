@@ -1,0 +1,23 @@
+{
+  "name": "NotificationTransport",
+  "base": "Model",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": false
+  },
+  "properties": {
+    "type": {
+      "type": "string",
+      "required": true,
+      "default": "mail"
+    },
+    "address": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

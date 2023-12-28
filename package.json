@@ -1,0 +1,54 @@
+{
+  "name": "medical-appointment-scheduling-server",
+  "version": "0.0.2",
+  "main": "server/server.js",
+  "license": "MIT",
+  "description": "medical-appointment-scheduling-server",
+  "author": "Sebastian Haas <sebastian@haas.tech>",
+  "homepage": "https://github.com/sebastianhaas/medical-appointment-scheduling",
+  "scripts": {
+    "start": "node .",
+    "pretest": "jscs --fix . && jshint .",
+    "posttest": "nsp check",
+    "heroku-postbuild": "node bin/automigrate.js"
+  },
+  "dependencies": {
+    "async": "^2.0.1",
+    "bunyan": "^1.8.1",
+    "bunyan-request": "^1.2.0",
+    "compression": "^1.6.2",
+    "cors": "^2.8.1",
+    "csv-parse": "^1.1.7",
+    "gaussian": "^1.1.0",
+    "google-material-color": "^1.2.6",
+    "helmet": "^3.0.0",
+    "loopback": "^3.4.0",
+    "loopback-boot": "^2.23.0",
+    "loopback-component-explorer": "^5.0.0",
+    "loopback-connector-postgresql": "^3.0.0",
+    "loopback-datasource-juggler": "^3.2.0",
+    "lunr": "^2.0.0",
+    "moment": "^2.14.1",
+    "node-schedule": "^1.2.0",
+    "node-uuid": "^1.4.7",
+    "schedulejs": "^0.6.3",
+    "serve-favicon": "^2.4.1",
+    "socket.io": "2.0.1"
+  },
+  "devDependencies": {
+    "jscs": "^3.0.4",
+    "jshint": "^2.5.6",
+    "nsp": "^2.6.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sebastianhaas/medical-appointment-scheduling-server.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sebastianhaas/medical-appointment-scheduling-server.git/issues"
+  },
+  "engines": {
+    "node": "^6.10.0",
+    "npm": "^3.10.10"
+  }
+}
